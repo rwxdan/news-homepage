@@ -253,7 +253,7 @@ h1 {
   gap: 1.5rem;
 }
 .highlights div img {
-  width: 30%;
+  max-width: 30%;
   object-fit: cover;
 }
 
