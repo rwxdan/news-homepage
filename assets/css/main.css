@@ -61,6 +61,10 @@
   line-height: 1.8;
 }
 
+.transition-hover {
+  transition: ease 200ms;
+}
+
 *,
 *::before,
 *::after {
