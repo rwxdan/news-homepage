@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "Inter";
+  font-weight: 400;
+  src: url("../static/fonts/Inter-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 700;
+  src: url("../static/fonts/Inter-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 800;
+  src: url("../static/fonts/Inter-ExtraBold.ttf");
+}
+
+$ff: "Inter", "Comic Sans MS", sans-serif;
+$primary-clr-500: hsl(35, 77%, 62%);
+$primary-clr-600: hsl(5, 85%, 63%);
+$neutral-clr-400: hsl(36, 100%, 99%);
+$neutral-clr-500: hsl(233, 8%, 79%);
+$neutral-clr-600: hsl(236, 13%, 42%);
+$neutral-clr-800: hsl(240, 100%, 5%);
+
+body {
+  font-family: $ff;
+  background-color: $neutral-clr-400;
+}
+
+#root {
+  min-height: 100vh;
+  max-width: 72em;
+  margin-inline: auto;
+  padding-inline: 1em;
+
+  @media screen and (max-width: 50em) {
+    overflow-x: hidden;
+  }
+}

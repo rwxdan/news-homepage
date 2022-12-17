@@ -1,0 +1,121 @@
+.page__nav {
+  padding-block: 4em 3em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+  &__menu {
+    display: none;
+    color: transparent;
+    position: absolute;
+    right: 0;
+    top: 2.5rem;
+    bottom: 0;
+    padding: 1em;
+    font-size: 1px;
+    width: 2.5rem;
+    aspect-ratio: 1;
+    background-color: transparent;
+    border: none;
+    background-image: url("../static/icons/icon-menu.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: 20;
+
+    @media screen and (max-width: 50em) {
+      display: block;
+    }
+  }
+
+  &__primary-nav {
+    list-style: none;
+    display: flex;
+    gap: 2.5em;
+
+    @media screen and (max-width: 50em) {
+      flex-direction: column;
+      top: 0;
+      left: 30%;
+      background-color: $neutral-clr-400;
+      position: fixed;
+      min-height: 100vh;
+      min-width: 100%;
+      padding: 20vmax 1.5em;
+      gap: 1.5em;
+      z-index: 10;
+      transform: translateX(100%);
+      transition: 300ms linear;
+    }
+
+    &__item {
+      display: block;
+      &--logo {
+        max-width: 4rem;
+
+        @media screen and (max-width: 50em) {
+          max-width: 3.25rem;
+        }
+      }
+      &--link {
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 400;
+        color: $neutral-clr-600;
+        transition: ease 300ms;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 0.125em;
+          background-color: $primary-clr-600;
+          opacity: 0;
+          transition: opacity 100ms, transform 200ms;
+          transform: scale(0);
+        }
+        &:is(:hover, :focus) {
+          color: $primary-clr-600;
+          &::after {
+            opacity: 1;
+            transform: scale(1);
+            transform-origin: center;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 50em) {
+    padding-block: 2em;
+
+    &__menu.active {
+      position: fixed;
+      right: 1rem;
+      width: 2.25rem;
+      top: 2rem;
+      background-image: url("../static/icons/icon-menu-close.svg");
+    }
+    &__menu.active + &__primary-nav {
+      animation: from-right;
+      transform: translateX(0%);
+      box-shadow: 0 0 30vw 30vw hsl(240, 100%, 5%, 0.5);
+    }
+
+    &__primary-nav__item--link:is(:hover, :focus)::after {
+      opacity: 0;
+      transform: scale(0);
+    }
+  }
+}
+
+@keyframes from-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
