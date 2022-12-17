@@ -1,14 +1,13 @@
 .page__highlights {
   display: flex;
   flex-flow: row wrap;
-  margin-block: 5em;
-  justify-content: space-between;
+  margin-block: 4.375em;
   gap: 2em;
 
   > div {
     display: flex;
     gap: 1.5em;
-    max-width: 35ch;
+    max-width: 34.9ch;
 
     img {
       max-width: 29%;
@@ -19,8 +18,9 @@
   &__item {
     &__number {
       color: $neutral-clr-500;
-      font-size: 1.75rem;
+      font-size: 1.9375rem;
       font-weight: 700;
+      line-height: 1;
     }
 
     h3 > a {
@@ -31,10 +31,12 @@
       line-height: 2;
       transition: 200ms ease;
       position: relative;
+      display: block;
+      margin-block-start: 0.375em;
       &::after {
         content: "";
         position: absolute;
-        bottom: -0.125em;
+        bottom: 0em;
         left: 0;
         width: 100%;
         height: 0.1em;
@@ -55,8 +57,9 @@
 
     p:last-child {
       color: $neutral-clr-600;
-      line-height: 1.6;
+      line-height: 1.75;
       font-size: 0.9375rem;
+      margin-block-start: 0.125em;
     }
   }
 }

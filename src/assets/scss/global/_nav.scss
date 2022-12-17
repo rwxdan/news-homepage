@@ -1,5 +1,5 @@
 .page__nav {
-  padding-block: 4em 3em;
+  padding-block: 5.5em 3.375em;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -31,7 +31,7 @@
   &__primary-nav {
     list-style: none;
     display: flex;
-    gap: 2.5em;
+    gap: 2.4375em;
 
     @media screen and (max-width: 50em) {
       flex-direction: column;
@@ -51,7 +51,7 @@
     &__item {
       display: block;
       &--logo {
-        max-width: 4rem;
+        width: 4.0875rem;
 
         @media screen and (max-width: 50em) {
           max-width: 3.25rem;
