@@ -4,7 +4,7 @@
 
 This is a solution to a [FEM](https://frontendmentor.io/) **challenge**.
 
-It's a static website which doens't have too much going on other than the layout itself. Nonetheless, it was fun to build and solve certain CSS problems in creative ways.
+It's a static website which doens't have too much going on other than Gthe layout itself. Nonetheless, it was fun to build and solve certain CSS problems in creative ways.
 
 The layout is fully responsive.
 
@@ -16,11 +16,11 @@ The layout is fully responsive.
 - [SASS](https://sass-lang.com) (scss)
 - [Visual Studio Code](https://code.visualstudio.com/)
 
-## [Live preview 🎨](https://rwxdan.github.io/news-homepage/)
+## [Live preview 🎨](https://news-homepage-nu-ashy.vercel.app/)
 
 - ### Mobile view 📱
-  ![](./dist/screenshots/phone_view.png)
+  ![](./public/screenshots/phone_view.png)
 - ### Tablet view 📱
-  ![](./dist/screenshots/tablet_view.png)
+  ![](./public/screenshots/tablet_view.png)
 - ### Desktop view 💻
-  ![](./dist/screenshots/desktop_view.png)
+  ![](./public/screenshots/desktop_view.png)
